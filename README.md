@@ -13,7 +13,9 @@
  - iOS の省電力モードでは Safari であってもエンティティが表示されないことがある．
 
 ## 作品例
-[5ebec/ARCard](https://github.com/5ebec/ARCard)です．
+自分のAR名刺を例として載せておきます．  
+[5ebec/ARCard](https://github.com/5ebec/ARCard)
+
 ![demo](https://github.com/5ebec/ARCard/blob/media/output.gif)
 
 ## LICENSE
