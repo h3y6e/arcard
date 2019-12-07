@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>ARCard Template</title>
+    <!-- A-frame -->
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <!-- AR.js -->
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene
+      embedded
+      arjs="debugUIEnabled:false;"
+      renderer="gammaOutPut: true;"
+      vr-mode-ui="enabled: false"
+    >
+      <a-assets>
+        <!-- text -->
+        <a-mixin
+          id="text"
+          text="color: white; anchor: center; font: sourcecodepro"
+          rotation="-90 0 0"
+          shadow="receive: true"
+        ></a-mixin>
+        <a-mixin
+          id="shadow"
+          text="color: black; anchor: center; font: sourcecodepro; opacity: 0.8"
+          rotation="-90 0 0"
+          shadow="receive: true"
+        ></a-mixin>
+        <!-- glTF or glb -->
+        <a-asset-item id="glb" src="assets/3d/stanford_bunny.glb"></a-asset-item>
+        <!-- contact -->
+        <img id="gmail" src="assets/img/contact/mail.png" />
+        <img id="instagram" src="assets/img/contact/instagram.png" />
+        <img id="twitter" src="assets/img/contact/twitter.png" />
+        <img id="github" src="assets/img/contact/github.png" />
+        <img id="blog" src="assets/img/contact/edit.png" />
+      </a-assets>
+
+      <!-- set marker -->
+      <a-marker
+        markerhandler
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse"
+        preset="custom"
+        type="pattern"
+        url="assets/marker/pattern-qrcode.patt"
+      >
+        <!-- glb -->
+        <a-entity
+          gltf-model="#glb"
+          scale="1 1 1"
+          rotation="0 0 0"
+          link="href: https://github.com/5ebec/arcard-template"
+          animation-mixer
+        ></a-entity>
+        <a-text
+          mixin="text"
+          value="bunny"
+          color="#a5ebec"
+          align="center"
+          width="4.5"
+          position="0.0 0.1 0.4"
+        ></a-text>
+        <a-text
+          mixin="shadow"
+          value="bunny"
+          align="center"
+          width="4.5"
+          position="0.01 0.0 0.41"
+        ></a-text>
+
+        <!-- profile -->
+        <a-text
+          mixin="text"
+          value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          width="2.5"
+          wrap-count="43"
+          position="0.0 0.05 0.9"
+        ></a-text>
+        <a-text
+          mixin="shadow"
+          value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          width="2.5"
+          wrap-count="43"
+          position="0.01 0.0 0.91"
+        ></a-text>
+
+        <!-- contact -->
+        <a-entity
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 25000; easing: linear"
+        >
+          <!-- blog -->
+          <a-entity
+            position="0 0.6 -1"
+            link="href: https://example.com/"
+          >
+            <a-image
+              src="#blog"
+              width="0.25"
+              height="0.25"
+              rotation="-60 0 0"
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            ></a-image>
+            <a-sphere
+              color="green"
+              radius="0.3"
+              opacity="0.2"
+            ></a-sphere>
+            <a-triangle
+              color="green"
+              vertex-a="0 0 1"
+              vertex-b="11.76 0 -15.18"
+              vertex-c="-11.76 0 -15.18"
+              opacity="0"
+            ></a-triangle>
+          </a-entity>
+          <!-- gmail -->
+          <a-entity
+            position="-0.951 0.6 -0.309"
+            link="href: https://mail.google.com/"
+          >
+            <a-image
+              src="#gmail"
+              width="0.25"
+              height="0.25"
+              rotation="-60 0 0"
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            ></a-image>
+            <a-sphere
+              color="red"
+              radius="0.3"
+              opacity="0.2"
+            ></a-sphere>
+            <a-triangle
+              color="red"
+              vertex-a="0.951 0 0.309"
+              vertex-b="-10.81 0 -15.87"
+              vertex-c="-18.07 0 6.489"
+              opacity="0"
+            ></a-triangle>
+          </a-entity>
+          <!-- twitter -->
+          <a-entity
+            position="-0.588 0.6 0.809"
+            link="href: https://twitter.com/"
+          >
+            <a-image
+              src="#twitter"
+              width="0.25"
+              height="0.25"
+              rotation="-60 0 0"
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            ></a-image>
+            <a-sphere
+              color="aqua"
+              radius="0.3"
+              opacity="0.2"
+            ></a-sphere>
+            <a-triangle
+              color="aqua"
+              vertex-a="0.588 0 -0.809"
+              vertex-b="-18.43 0 5.371"
+              vertex-c="0.588 0 19.19"
+              opacity="0"
+            ></a-triangle>
+          </a-entity>
+          <!-- github -->
+          <a-entity
+            position="0.588 0.6 0.809"
+            link="href: https://github.com/"
+          >
+            <a-image
+              src="#github"
+              width="0.25"
+              height="0.25"
+              rotation="-60 0 0"
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            ></a-image>
+            <a-sphere
+              color="black"
+              radius="0.3"
+              opacity="0.2"
+            ></a-sphere>
+            <a-triangle
+            color="black"
+            vertex-a="-0.588 0 -0.809"
+            vertex-b="-0.588 0 19.19"
+            vertex-c="18.43 0 5.371"
+            opacity="0"
+          ></a-triangle>
+          </a-entity>
+          <!-- instagram -->
+          <a-entity
+            position="0.951 0.6 -0.309"
+            link="href: https://instagram.com/"
+          >
+            <a-image
+              src="#instagram"
+              width="0.25"
+              height="0.25"
+              rotation="-60 0 0"
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            ></a-image>
+            <a-sphere
+              color="fuchsia"
+              radius="0.3"
+              opacity="0.2"
+            ></a-sphere>
+            <a-triangle
+            color="fuchsia"
+            vertex-a="-0.951 0 0.309"
+            vertex-b="18.069 0 6.489"
+            vertex-c="10.809 0 -15.871"
+            opacity="0"
+          ></a-triangle>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+      <!-- AR camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
