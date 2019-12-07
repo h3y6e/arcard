@@ -9,7 +9,7 @@
 
 #### ※ 現時点で把握できている追加の情報です．  
  - iOS 版 Chrome は Webcam error が出て動作しない．
- - iOS12 では設定 > Safari の Camera & Microphone Access を ON にしないと Webcam error が出て動作しない．
+ - iOS12 では `設定 > Safari > Camera & Microphone Access` を ON にしないと Webcam error が出て動作しない．
  - iOS の省電力モードでは Safari であってもエンティティが表示されないことがある．
 
 ## 作品例
