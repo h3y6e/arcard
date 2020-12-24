@@ -2,13 +2,12 @@
   "name": "arcard-template",
   "version": "0.1.0",
   "description": "ARCard Template",
-  "main": "index.html",
-  "repository": "ssh://git@github.com/5ebec/arcard-template.git",
+  "repository": "https://github.com/5ebec/arcard-template",
   "author": "heyhoe <hash.a5ebec@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
     "format": "prettier --write . -u"
   },
   "devDependencies": {
