@@ -14,7 +14,7 @@
     <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
   </head>
 
-  <body style="margin : 0px; overflow: hidden;">
+  <body style="margin: 0px; overflow: hidden">
     <a-scene
       embedded
       arjs="debugUIEnabled:false;"
@@ -36,7 +36,10 @@
           shadow="receive: true"
         ></a-mixin>
         <!-- glTF or glb -->
-        <a-asset-item id="glb" src="assets/3d/stanford_bunny.glb"></a-asset-item>
+        <a-asset-item
+          id="glb"
+          src="assets/3d/stanford_bunny.glb"
+        ></a-asset-item>
         <!-- contact -->
         <img id="gmail" src="assets/img/contact/mail.png" />
         <img id="instagram" src="assets/img/contact/instagram.png" />
@@ -100,10 +103,7 @@
           animation="property: rotation; to: 0 360 0; loop: true; dur: 25000; easing: linear"
         >
           <!-- facebook -->
-          <a-entity
-            position="0 0.6 -1"
-            link="href: https://www.facebook.com/"
-          >
+          <a-entity position="0 0.6 -1" link="href: https://www.facebook.com/">
             <a-image
               src="#facebook"
               width="0.25"
@@ -111,11 +111,7 @@
               rotation="-60 0 0"
               animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
             ></a-image>
-            <a-sphere
-              color="blue"
-              radius="0.3"
-              opacity="0.2"
-            ></a-sphere>
+            <a-sphere color="blue" radius="0.3" opacity="0.2"></a-sphere>
             <a-triangle
               color="blue"
               vertex-a="0 0 1"
@@ -136,11 +132,7 @@
               rotation="-60 0 0"
               animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
             ></a-image>
-            <a-sphere
-              color="red"
-              radius="0.3"
-              opacity="0.2"
-            ></a-sphere>
+            <a-sphere color="red" radius="0.3" opacity="0.2"></a-sphere>
             <a-triangle
               color="red"
               vertex-a="0.951 0 0.309"
@@ -161,11 +153,7 @@
               rotation="-60 0 0"
               animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
             ></a-image>
-            <a-sphere
-              color="aqua"
-              radius="0.3"
-              opacity="0.2"
-            ></a-sphere>
+            <a-sphere color="aqua" radius="0.3" opacity="0.2"></a-sphere>
             <a-triangle
               color="aqua"
               vertex-a="0.588 0 -0.809"
@@ -175,10 +163,7 @@
             ></a-triangle>
           </a-entity>
           <!-- github -->
-          <a-entity
-            position="0.588 0.6 0.809"
-            link="href: https://github.com/"
-          >
+          <a-entity position="0.588 0.6 0.809" link="href: https://github.com/">
             <a-image
               src="#github"
               width="0.25"
@@ -186,18 +171,14 @@
               rotation="-60 0 0"
               animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
             ></a-image>
-            <a-sphere
-              color="black"
-              radius="0.3"
-              opacity="0.2"
-            ></a-sphere>
+            <a-sphere color="black" radius="0.3" opacity="0.2"></a-sphere>
             <a-triangle
-            color="black"
-            vertex-a="-0.588 0 -0.809"
-            vertex-b="-0.588 0 19.19"
-            vertex-c="18.43 0 5.371"
-            opacity="0"
-          ></a-triangle>
+              color="black"
+              vertex-a="-0.588 0 -0.809"
+              vertex-b="-0.588 0 19.19"
+              vertex-c="18.43 0 5.371"
+              opacity="0"
+            ></a-triangle>
           </a-entity>
           <!-- instagram -->
           <a-entity
@@ -211,18 +192,14 @@
               rotation="-60 0 0"
               animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
             ></a-image>
-            <a-sphere
-              color="fuchsia"
-              radius="0.3"
-              opacity="0.2"
-            ></a-sphere>
+            <a-sphere color="fuchsia" radius="0.3" opacity="0.2"></a-sphere>
             <a-triangle
-            color="fuchsia"
-            vertex-a="-0.951 0 0.309"
-            vertex-b="18.069 0 6.489"
-            vertex-c="10.809 0 -15.871"
-            opacity="0"
-          ></a-triangle>
+              color="fuchsia"
+              vertex-a="-0.951 0 0.309"
+              vertex-b="18.069 0 6.489"
+              vertex-c="10.809 0 -15.871"
+              opacity="0"
+            ></a-triangle>
           </a-entity>
         </a-entity>
       </a-marker>
