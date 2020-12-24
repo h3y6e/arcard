@@ -19,4 +19,4 @@
 ![demo](https://github.com/5ebec/ARCard/blob/media/output.gif)
 
 ## LICENSE
-MIT
+[MIT](LICENSE)
