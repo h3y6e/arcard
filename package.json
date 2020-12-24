@@ -1,0 +1,9 @@
+{
+  "name": "arcard-template",
+  "version": "0.1.0",
+  "description": "ARCard Template",
+  "main": "index.html",
+  "repository": "ssh://git@github.com/5ebec/arcard-template.git",
+  "author": "heyhoe <hash.a5ebec@gmail.com>",
+  "license": "MIT"
+}
