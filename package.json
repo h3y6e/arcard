@@ -5,5 +5,14 @@
   "main": "index.html",
   "repository": "ssh://git@github.com/5ebec/arcard-template.git",
   "author": "heyhoe <hash.a5ebec@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "format": "prettier --write . -u"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1"
+  }
 }
