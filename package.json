@@ -1,17 +1,27 @@
 {
   "name": "arcard-template",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "ARCard Template",
   "repository": "https://github.com/5ebec/arcard-template",
   "author": "heyhoe <hash.a5ebec@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "dev": "run-p dev:* cp",
+    "dev:percel": "parcel src/index.pug",
+    "dev:ngrok": "ngrok http 1234",
+    "cp": "cp -r src/assets dist",
+    "clean": "rimraf dist/*",
+    "build": "parcel build src/index.pug",
+    "deploy": "run-s clean build cp",
     "format": "prettier --write . -u"
   },
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.13.2",
+    "ngrok": "^3.4.0",
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pug": "^3.0.0",
+    "rimraf": "^3.0.2"
   }
 }
