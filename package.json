@@ -7,13 +7,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "run-p dev:percel cp",
+    "dev": "run-p dev:parcel cp",
     "ngrok": "ngrok http 1234",
-    "dev:percel": "parcel src/index.pug",
+    "dev:parcel": "parcel src/index.pug",
     "cp": "cp -r src/assets dist",
     "clean": "rimraf dist/*",
-    "build": "run-s clean cp build:percel",
-    "build:percel": "parcel build src/index.pug",
+    "build": "run-s clean cp build:parcel",
+    "build:parcel": "parcel build src/index.pug",
     "fmt": "prettier --write . -u"
   },
   "devDependencies": {
