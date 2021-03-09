@@ -6,9 +6,9 @@
   "author": "heyhoe <hash.a5ebec@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p dev:* cp",
-    "dev:percel": "parcel src/index.pug",
-    "dev:ngrok": "ngrok http 1234",
+    "dev": "run-p percel cp",
+    "percel": "parcel src/index.pug",
+    "ngrok": "ngrok http 1234",
     "cp": "cp -r src/assets dist",
     "clean": "rimraf dist/*",
     "build": "parcel build src/index.pug",
