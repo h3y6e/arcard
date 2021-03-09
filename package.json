@@ -1,10 +1,11 @@
 {
-  "name": "arcard-template",
+  "name": "arcard",
   "version": "1.0.0",
-  "description": "ARCard Template",
-  "repository": "https://github.com/5ebec/arcard-template",
+  "description": "AR Business Card",
+  "repository": "https://github.com/5ebec/arcard",
   "author": "heyhoe <hash.a5ebec@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "run-p dev:percel cp",
     "ngrok": "ngrok http 1234",
@@ -21,7 +22,7 @@
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "rimraf": "^3.0.2"
   }
 }
