@@ -13,7 +13,7 @@
     "clean": "rimraf dist/*",
     "build": "parcel build src/index.pug",
     "deploy": "run-s clean build cp",
-    "format": "prettier --write . -u"
+    "fmt": "prettier --write . -u"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.13.2",
