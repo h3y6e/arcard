@@ -6,13 +6,13 @@
   "author": "heyhoe <hash.a5ebec@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p percel cp",
-    "percel": "parcel src/index.pug",
+    "dev": "run-p dev:percel cp",
     "ngrok": "ngrok http 1234",
+    "dev:percel": "parcel src/index.pug",
     "cp": "cp -r src/assets dist",
     "clean": "rimraf dist/*",
-    "build": "parcel build src/index.pug",
-    "deploy": "run-s clean build cp",
+    "build": "run-s clean cp build:percel",
+    "build:percel": "parcel build src/index.pug",
     "fmt": "prettier --write . -u"
   },
   "devDependencies": {
