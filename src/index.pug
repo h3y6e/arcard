@@ -23,14 +23,13 @@ html
     script(src="https://aframe.io/releases/0.9.2/aframe.min.js")
     //- AR.js
     script(
-      src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"
+      src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"
     )
 
   body(style="margin: 0px; overflow: hidden")
     a-scene(
       embedded,
       arjs="debugUIEnabled:false;",
-      renderer="gammaOutPut: true;",
       vr-mode-ui="enabled: false"
     )
       a-assets
@@ -57,7 +56,7 @@ html
         cursor="fuse: false; rayOrigin: mouse",
         preset="custom",
         type="pattern",
-        url="assets/marker/pattern-marker.patt"
+        url="assets/marker/pattern-qrcode.patt"
       )
         //- 3d model
         a-entity(

@@ -10,18 +10,19 @@
     "dev": "run-s clean cp dev:parcel",
     "ngrok": "ngrok http 1234",
     "build": "run-s clean cp build:parcel",
-    "clean": "rimraf dist/*",
+    "clean": "run-s clean:*",
+    "clean:dist": "rimraf dist/*",
+    "clean:cache": "rimraf .cache",
     "cp": "cp -r src/assets dist",
     "dev:parcel": "parcel src/index.pug",
     "build:parcel": "parcel build src/index.pug",
     "fmt": "prettier --write . -u"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "2.0.0-nightly.621",
     "@prettier/plugin-pug": "^1.13.5",
     "ngrok": "^3.4.0",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.0.0-beta.1",
+    "parcel-bundler": "1.12.3",
     "prettier": "^2.2.1",
     "pug": "^3.0.2",
     "rimraf": "^3.0.2"
