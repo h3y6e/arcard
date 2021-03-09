@@ -1,0 +1,192 @@
+-
+  var name = "heyhoe"
+  var desc = "I'm a senior of Undergraduate School of Electrical & Electronic Engineering in Faculty of Engineering, Kyoto University. I study Computer Vision & Machine Learning."
+  var glb = "assets/3d/shyguy.glb"
+  var glb_link = "href: https://a5e.be/c"
+  var facebook_link = "href: https://www.facebook.com/5ebec"
+  var mail_link = "href: https://mail.google.com/"
+  var twitter_link = "href: https://twitter.com/5ebec"
+  var github_link = "href: https://github.com/5ebec"
+  var instagram_link = "href: https://instagram.com/5ebec"
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(
+      name="viewport",
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    )
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    title 5ebec's ARCard
+    //- A-Frame
+    script(src="https://aframe.io/releases/0.9.2/aframe.min.js")
+    //- AR.js
+    script(
+      src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"
+    )
+
+  body(style="margin: 0px; overflow: hidden")
+    a-scene(
+      embedded,
+      arjs="debugUIEnabled:false;",
+      renderer="gammaOutPut: true;",
+      vr-mode-ui="enabled: false"
+    )
+      a-assets
+        a-mixin#text(
+          text="color: white; anchor: center; font: sourcecodepro",
+          rotation="-90 0 0",
+          shadow="receive: true"
+        )
+        a-mixin#shadow(
+          text="color: black; anchor: center; font: sourcecodepro; opacity: 0.8",
+          rotation="-90 0 0",
+          shadow="receive: true"
+        )
+        a-asset-item#glb(src=glb)
+        img#gmail(src="img/contact/mail.png")
+        img#instagram(src="img/contact/instagram.png")
+        img#twitter(src="img/contact/twitter.png")
+        img#github(src="img/contact/github.png")
+        img#facebook(src="img/contact/facebook.png")
+
+      a-marker(
+        markerhandler,
+        emitevents="true",
+        cursor="fuse: false; rayOrigin: mouse",
+        preset="custom",
+        type="pattern",
+        url="assets/marker/pattern-marker.patt"
+      )
+        //- 3d model
+        a-entity(
+          gltf-model="#glb",
+          scale="0.1 0.1 0.1",
+          rotation="-20 0 0",
+          link=glb_link,
+          animation-mixer
+        )
+
+        //- name
+        a-text(
+          mixin="text",
+          value=name,
+          color="#a5ebec",
+          align="center",
+          width="4.5",
+          position="0.0 0.1 0.35"
+        )
+        a-text(
+          mixin="shadow",
+          value=name,
+          align="center",
+          width="4.5",
+          position="0.01 0.0 0.36"
+        )
+
+        //- description
+        a-text(
+          mixin="text",
+          value=desc,
+          width="2.5",
+          wrap-count="43",
+          position="0.0 0.05 0.9"
+        )
+        a-text(
+          mixin="shadow",
+          value=desc,
+          width="2.5",
+          wrap-count="43",
+          position="0.01 0.0 0.91"
+        )
+
+        //- social links
+        a-entity(
+          rotation="0 0 0",
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 25000; easing: linear"
+        )
+          a-entity(position="0 0.6 -1", link=facebook_link)
+            a-image(
+              src="#facebook",
+              width="0.25",
+              height="0.25",
+              rotation="-60 0 0",
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            )
+            a-sphere(color="blue", radius="0.3", opacity="0.2")
+            a-triangle(
+              color="blue",
+              vertex-a="0 0 1",
+              vertex-b="11.76 0 -15.18",
+              vertex-c="-11.76 0 -15.18",
+              opacity="0"
+            )
+          a-entity(position="-0.951 0.6 -0.309", link=mail_link)
+            a-image(
+              src="#gmail",
+              width="0.25",
+              height="0.25",
+              rotation="-60 0 0",
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            )
+            a-sphere(color="red", radius="0.3", opacity="0.2")
+            a-triangle(
+              color="red",
+              vertex-a="0.951 0 0.309",
+              vertex-b="-10.81 0 -15.87",
+              vertex-c="-18.07 0 6.489",
+              opacity="0"
+            )
+          a-entity(position="-0.588 0.6 0.809", link=twitter_link)
+            a-image(
+              src="#twitter",
+              width="0.25",
+              height="0.25",
+              rotation="-60 0 0",
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            )
+            a-sphere(color="aqua", radius="0.3", opacity="0.2")
+            a-triangle(
+              color="aqua",
+              vertex-a="0.588 0 -0.809",
+              vertex-b="-18.43 0 5.371",
+              vertex-c="0.588 0 19.19",
+              opacity="0"
+            )
+          a-entity(position="0.588 0.6 0.809", link=github_link)
+            a-image(
+              src="#github",
+              width="0.25",
+              height="0.25",
+              rotation="-60 0 0",
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            )
+            a-sphere(color="black", radius="0.3", opacity="0.2")
+            a-triangle(
+              color="black",
+              vertex-a="-0.588 0 -0.809",
+              vertex-b="-0.588 0 19.19",
+              vertex-c="18.43 0 5.371",
+              opacity="0"
+            )
+          a-entity(position="0.951 0.6 -0.309", link=instagram_link)
+            a-image(
+              src="#instagram",
+              width="0.25",
+              height="0.25",
+              rotation="-60 0 0",
+              animation="property: rotation; to: -60 -360 0; loop: true; dur: 25000; easing: linear"
+            )
+            a-sphere(color="fuchsia", radius="0.3", opacity="0.2")
+            a-triangle(
+              color="fuchsia",
+              vertex-a="-0.951 0 0.309",
+              vertex-b="18.069 0 6.489",
+              vertex-c="10.809 0 -15.871",
+              opacity="0"
+            )
+      //- ambient light
+      a-entity(light="type: ambient; intensity: 2;")
+      //- AR camera
+      a-entity(camera)
