@@ -1,10 +1,10 @@
 -
   var name = "heyhoe"
-  var desc = "I'm a senior of Undergraduate School of Electrical & Electronic Engineering in Faculty of Engineering, Kyoto University. I study Computer Vision & Machine Learning."
+  var desc = "I received Bachelor's degree from Kyoto University. I'm currently enrolled as a Master's degree students in Interactive Media Design Laboratory of NAIST from October 2020. I study UI & HCI for AR."
   var glb = "assets/3d/shyguy.glb"
-  var glb_link = "href: https://a5e.be/c"
+  var portfolio_link = "href: https://a5e.be/c"
   var facebook_link = "href: https://www.facebook.com/5ebec"
-  var mail_link = "href: https://mail.google.com/"
+  var blog_link = "href: https://blog.5ebec.dev"
   var twitter_link = "href: https://twitter.com/5ebec"
   var github_link = "href: https://github.com/5ebec"
   var instagram_link = "href: https://instagram.com/5ebec"
@@ -44,7 +44,7 @@ html
           shadow="receive: true"
         )
         a-asset-item#glb(src=glb)
-        img#gmail(src="img/contact/mail.png")
+        img#blog(src="img/contact/blog.png")
         img#instagram(src="img/contact/instagram.png")
         img#twitter(src="img/contact/twitter.png")
         img#github(src="img/contact/github.png")
@@ -63,7 +63,7 @@ html
           gltf-model="#glb",
           scale="0.1 0.1 0.1",
           rotation="-20 0 0",
-          link=glb_link,
+          link=portfolio_link,
           animation-mixer
         )
 
@@ -121,9 +121,9 @@ html
               vertex-c="-11.76 0 -15.18",
               opacity="0"
             )
-          a-entity(position="-0.951 0.6 -0.309", link=mail_link)
+          a-entity(position="-0.951 0.6 -0.309", link=blog_link)
             a-image(
-              src="#gmail",
+              src="#blog",
               width="0.25",
               height="0.25",
               rotation="-60 0 0",
