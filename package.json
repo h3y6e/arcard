@@ -21,7 +21,7 @@
   "devDependencies": {
     "@prettier/plugin-pug": "^1.13.5",
     "ngrok": "^3.4.0",
-    "node-forge": "^0.10.0",
+    "node-forge": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "1.12.3",
     "prettier": "^2.2.1",
